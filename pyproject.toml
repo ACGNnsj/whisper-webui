@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "whisper-webui"
+version = "0.1.0"
+description = ""
+authors = ["ACGNnsj <ootopoo@vip.qq.com>"]
+readme = "README.md"
+packages = [{ include = "whisper_webui" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+ffmpeg-python = "^0.2.0"
+openai-whisper = "^20230314"
+torch = { file = "wheels/torch-2.0.0+cu118-cp310-cp310-win_amd64.whl" }
+gradio = "^3.27.0"
+yt-dlp = "*"
+torchaudio = { file = "wheels/torchaudio-2.0.1+cu118-cp310-cp310-win_amd64.whl" }
+altair = "*"
+transformers = "^4.28.1"
+json5 = "*"
+numba = "^0.57.0rc1"
+triton = { file = "wheels/triton-2.0.0-cp310-cp310-win_amd64.whl" }
+
+ctranslate2 = "*"
+faster-whisper = "*"
+more_itertools = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "aliyun-source"
+url = "https://mirrors.aliyun.com/pypi/simple/"
+default = true
